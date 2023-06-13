@@ -15,10 +15,13 @@ services:
   cl-exam-backend:
     # image:  zimage-backend
     image: hana2023/zimage-backend
+    deploy:
+      replicas: 5
     restart: always
     ports:
       - 3000:3000
 #    command: npm run db:migrate --y && npm run db:seed --y
+    command: sh -c "npm run db:migrate && npm run db:seed && npm run dev"
     environment:
       DB_HOSTNAME: db
       DB_USERNAME: root
@@ -30,6 +33,8 @@ services:
   cl-exam-frontend:
     # image:  zimage-frontend
     image: hana2023/zimage-frontend
+    deploy:
+      replicas: 5
     restart: always
     ports:
       - 8000:8000
