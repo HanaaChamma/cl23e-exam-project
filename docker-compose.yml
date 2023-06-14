@@ -13,10 +13,11 @@ services:
       - db:/var/lib/mariadb
 
   cl-exam-backend:
+
     # image:  zimage-backend
     image: hana2023/zimage-backend
     deploy:
-      replicas: 5
+      replicas: 1
     restart: always
     ports:
       - 3000:3000
@@ -34,7 +35,7 @@ services:
     # image:  zimage-frontend
     image: hana2023/zimage-frontend
     deploy:
-      replicas: 5
+      replicas: 1
     restart: always
     ports:
       - 8000:8000
