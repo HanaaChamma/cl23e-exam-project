@@ -2,9 +2,13 @@
 # Trin for at køre applicationen : 
  
 •	start docker desktop 
+
 •	Clone App og navigere ind i mappen hvor der ligger docker-compose file .Her skal du åben CMD 
+
 •	Kør ”docker  swarm init ”
+
 •	derefefter kør ” docker stack deploy  --compose-file docker-compose.yml zayexam”.
+
 •	Besøg hjemmesiden på localhost:8000 eller backend på localhost:3000 
 
 
