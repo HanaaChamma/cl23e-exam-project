@@ -1,5 +1,5 @@
 
-# Trin for at køre applicationen : 
+# Dokumentation for at køre container miljøet :
  
 •	start docker desktop 
 
